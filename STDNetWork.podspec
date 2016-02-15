@@ -1,0 +1,29 @@
+
+Pod::Spec.new do |s|
+  s.name             = "STDNetWork"
+  s.version          = "0.0.1"
+  s.summary          = "A short description of STDNetWork."
+  s.description      = <<-DESC
+                       An optional longer description of pod STDNetWork
+
+                       * Markdown format.
+                       * Don't worry about the indent, we strip it!
+                       DESC
+  s.homepage         = "https://github.com/zyk1121/STDNetWork"
+  s.license          = { :type => 'All rights reserved' }
+  s.author           = { "Yuanke Zhang" => "542944896@qq.com" }
+  s.source           = { :git => "https://github.com/zyk1121/STDNetWork.git", :tag => s.version.to_s }
+  s.platform     = :ios, '7.0'
+  s.requires_arc = true
+
+  s.source_files = "Classes/**/*.{h,m}"
+  s.resource_bundles = {
+    'CYKImageKit' => ['Classes/Resources/*.png']
+  }
+  s.library = 'stdc++'
+  s.frameworks = 'Foundation','UIKit'
+
+  s.dependency 'libextobjc', '~> 0.4'
+  s.dependency 'AFNetworking', '~> 3.0.4'
+  s.dependency 'Masonry', '~> 0.6.0'
+end
